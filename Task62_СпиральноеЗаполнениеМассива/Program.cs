@@ -10,7 +10,8 @@ int x = 1;
 int i = 0;
 int j = 0;
 
-
+void NewArray (int [,] spiralArray)
+{
 while (x <= spiralArray.GetLength(0) * spiralArray.GetLength(1))
 {
     spiralArray[i, j] = x;
@@ -20,7 +21,8 @@ while (x <= spiralArray.GetLength(0) * spiralArray.GetLength(1))
     else if (i >= j && i + j > spiralArray.GetLength(1) - 1) j--;
     else i--;
 }
-
+}
+NewArray (spiralArray);
 
 void PrintArray(int[,] spiralArray)
 {

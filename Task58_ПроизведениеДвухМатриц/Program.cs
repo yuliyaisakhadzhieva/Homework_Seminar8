@@ -74,7 +74,7 @@ PrintArrayTwo(mat);
 
 Console.WriteLine();
 
-void Xmatrix(int[,] mas, int[,] mat, int[,] resMatrix)
+int Xmatrix(int[,] mas, int[,] mat, int[,] resMatrix)
 {
     for (int i = 0; i < resMatrix.GetLength(0); i++)
     {
@@ -88,10 +88,11 @@ void Xmatrix(int[,] mas, int[,] mat, int[,] resMatrix)
             resMatrix[i, j] = sum;
         }
     }
-    Xmatrix(mas, mat, resMatrix);
-    PrintArray(resMatrix);
+    return resMatrix;
 }
+Xmatrix(mas, mat, resMatrix);
 Console.WriteLine("Произведение двух матриц: ");
+PrintArray(resMatrix);
 
 
 
